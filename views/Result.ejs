@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submitted Information</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <div class="card shadow p-4">
+
+  <h2 class="text-center mb-4">Submitted information</h2>
+
+   <ul class="list-group">
+
+    <li class="list-group-item">Name:<%= user.userName %></li>
+    <li class="list-group-item">Mother's Name:<%= user.userMothername %></li>
+    <li class="list-group-item">Email:<%= user.userEmail %></li>
+    <li class="list-group-item">Adhar Number:<%= user.userAdhardetails %></li>
+    <li class="list-group-item">Mobile Number:<%= user.userMobilenumber %></li>
+    <li class="list-group-item">PAN number:<%= user.userPandetails %></li>
+    </ul>
+    
+
+    <div class="text-center mt-4">
+      <a href="/home" class="btn btn-primary">Go Back</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
