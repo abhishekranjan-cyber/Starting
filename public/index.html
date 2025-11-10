@@ -77,7 +77,7 @@
     return response.json();
   })
   .then(function(data) {
-    document.getElementById('userName').innertext = data.name;
+    document.getElementById('userName').value = data.name;
 
   })
   .catch(function(error) {
