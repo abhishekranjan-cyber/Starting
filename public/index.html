@@ -77,11 +77,12 @@
     return response.json();
   })
   .then(function(data) {
-    document.getElementByID('userName').innertext = data.name;
+    document.getElementById('userName').innertext = data.name;
 
   })
   .catch(function(error) {
     console.log
   })
+</script>
 </body>
 </html>
