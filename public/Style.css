@@ -1,7 +1,8 @@
+body {
+  background: yellow !important;
+}
 @media (max-width: 600px) {
-  .card {
-    padding: 15px;
-  }
+  .card {padding: 15px; }
   h1, h2 {
     font-size: 1.5rem;
   }
