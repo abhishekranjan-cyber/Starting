@@ -1,42 +1,31 @@
-var express = require('express'); 
-var app = express();
-const port = 3000;
+const express = require('express');
+const app = express();
 
 app.use(express.urlencoded({ extended: true }));
-app.use(function(req,resp,next){
+app.use(express.static("public"));
 
-    console.log('Logging');
-    next();
+app.set("PORT", 3000);
+app.set("view engine", "ejs");
 
+app.get("/", (req, res) => {
+  res.render("home");
 });
 
-app.set("PORT", 3000); 
-app.set('view engine', 'ejs');
-app.use("/",express.static("public"));
-
-
-app.get("/home", function(req, res) {
-    const userName = "EASYCRED"
-    const message = "Welcome to EasyCred, where loans are made easy";
-   
-    res.render('home', { name: userName, msg: message});
+app.get("/about", (req, res) => {
+  res.render("about");
 });
 
-app.get("/api/user", function(req, res){
-    res.json({ name: "EasyCred", message: "Welcome to EasyCred from Client Side!"});
+app.get("/apply-loan", (req, res) => {
+  res.render("applyloan", {
+    msg: "Apply for Loan",
+    name: "EasyCred Loan Application"
+  });
 });
 
-app.post("/post/form",function(req,res){
-    console.log("Form data:", req.body);
-    res.render('result', { user: req.body });
+app.post("/post/form", (req, res) => {
+  res.render("result", { user: req.body });
 });
 
-app.listen(app.get("PORT"),function(){
-    console.log('Server Running on Port ' + app.get("PORT"));
+app.listen(app.get("PORT"), () => {
+  console.log("Server running at http://localhost:3000");
 });
-
-
-
-
-
-

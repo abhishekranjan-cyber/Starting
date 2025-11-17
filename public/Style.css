@@ -1,9 +1,163 @@
-@media screen and (max-width: 600px) {
-  .card {
-    padding: 10px ;
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+.header {
+  width: 100%;
+  background: white;
+  padding: 15px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+
+.nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.nav a:hover {
+  color: #1a73e8;
+}
+
+.apply-btn {
+  background: #1a73e8;
+  padding: 8px 18px;
+  border-radius: 6px;
+  color: white !important;
+  transition: 0.3s;
+}
+
+.apply-btn:hover {
+  background: #0059d4;
+}
+
+
+.home-body {
+  background: linear-gradient(135deg, #1a73e8, #0059d4);
+  color: white;
+  min-height: 100vh;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 130px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  background: white;
+  color: #1a73e8;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-btn:hover {
+  background: #e6e6e6;
+}
+
+
+.footer {
+  background: #1a73e8; 
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.footer-link {
+  color: white !important;
+  text-decoration: none;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.footer-link:hover {
+  color: #e6e6e6 !important;
+  text-decoration: underline;
+}
+
+.footer-line {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.card {
+  border-radius: 10px;
+  border: none;
+}
+
+label {
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav a {
+    margin-left: 10px;
+    font-size: 16px;
   }
 
-  h1, h2 {
-    font-size: 1.2rem ;
+  .logo {
+    font-size: 22px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .header {
+    padding: 12px 20px;
+  }
+
+  .nav a {
+    margin-left: 8px;
+    font-size: 15px;
+  }
+
+  .apply-btn {
+    padding: 6px 14px;
   }
 }
