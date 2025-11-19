@@ -4,8 +4,7 @@ const Loan = require("./models/Loan");
 
 const app = express();
 
-
-mongoose.connect("mongodb://127.0.0.1:27017/easycred")
+mongoose.connect(process.env.MONGO_URL || "mongodb://127.0.0.1:27017/easycred")
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log("DB Error:", err));
 

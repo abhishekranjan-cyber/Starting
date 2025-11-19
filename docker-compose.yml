@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: easycred_web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URL: mongodb://mongo:27017/easycred
+    volumes:
+      - .:/app
+    restart: always
+
+  mongo:
+    image: mongo:7
+    container_name: easycred_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: always
+
+volumes:
+  mongo_data:
